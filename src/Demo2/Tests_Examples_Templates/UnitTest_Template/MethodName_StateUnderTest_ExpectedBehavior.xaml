@@ -1,0 +1,153 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="UnitTests" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ParsingTest_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:cv="clr-namespace:CustomActivities.VariableComparer;assembly=CustomActivities.VariableComparer"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>CustomActivities.VariableComparer</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>CustomActivities.VariableComparer</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Unit testing comprises of three stages: &#xA;&#xA;       - Arrange&#xA;       - Act&#xA;       - Assert. &#xA;&#xA;Basic idea of Unit Testing is to arrange a set of data that will be used to test the code. Using that data, tested code is run and the result is assigned to the &quot;actual&quot; variable. Result of the test run is then asserted to see if test have passed or not (usually this is done by comparing &quot;actual&quot; value with the &quot;expected&quot;).&#xA;&#xA;Tests can be constructed to test &quot;happy&quot; paths, fail paths and/or to check if the correct exceptions are thrown by the code.&#xA;&#xA;It is recommended to make more than one test for each peace of the code. This is to make sure that the code correctly handles both good and bad data, and also to see if correct exceptions are thrown by the code.&#xA;&#xA;IMPORTANT: For Unit Test to be eligible for use in TestingFramework it must implement Assert Unit Test activity that can be found in CustomActivities.VariableComparer namespace." DisplayName="Unit Test" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="expected" />
+      <Variable x:TypeArguments="x:String" Name="actual" />
+    </Sequence.Variables>
+    <Sequence sap2010:Annotation.AnnotationText="Purpose of the arrange stage is to define input parameters for the test and expected result of the test run:&#xA;&#xA;     - Manually define input data&#xA;     - (If needed) Define expected result&#xA;     - (If needed) Read configuration file" DisplayName="Arrange" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Assign DisplayName="Set expected value" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[expected]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Purpose of act stage is to run the code that is being tested (by invoking the code and supplying required arguments). &#xA;&#xA;Output of this stage should be actual result that code produces assigned to the &quot;actual&quot; variable." DisplayName="Act" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="1. Invoke workflow that is being tested.&#xA;2. Assign &quot;actual&quot; variable to the desired output argument (if there are any).&#xA;3. (Optional) If the workflow doesn't have output arguments, ask yourself what is supposed to happen? Based on the answer to the question, add aditional code that will output &quot;actual&quot; value. (e.g. Invoked code clicks a button. After the click, a page appears (this code has no ouput arguments).&#xA;In this case add find element activity and assign output of the find element activity to the &quot;actual&quot; variable)." DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="x:String" x:Key="output">[actual]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <ui:InvokeWorkflowFile.WorkflowFileName>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </ui:InvokeWorkflowFile.WorkflowFileName>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Purpose of the assert stage is to determine if test have passed or not. &#xA;&#xA;Here we use custom activity called Assert Unit Tests (make sure that you have installed package Custom.Activities.VariableComparer)&#xA;&#xA;NOTE: Recommended way to use Assert Unit Test activity is to use Assert methods like Assert.IsNotNull(actual) or Assert.AreEqual(expected,actual).&#xA;&#xA;NOTE (Not recommended): It is also possible to enter any boolean expression. In this case if entered expression returns as false only generic message will be logged in TestingFramework logs. This can be useful if some custom comparison is needed that is not available as a method of Assert class." DisplayName="Assert" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <cv:AssertUnitTest Assert="[Assert.IsNotNull(actual)]" DisplayName="Assert unit test" sap2010:WorkflowViewState.IdRef="AssertUnitTest_2" />
+      <cv:AssertUnitTest Assert="[Assert.AreEqual(expected,actual)]" DisplayName="Assert unit test" sap2010:WorkflowViewState.IdRef="AssertUnitTest_1" />
+    </Sequence>
+    <sads:DebugSymbol.Symbol>d5gBRDpcRG9jdW1lbnRzIGZvciBQcm9qZWN0c1wwM19VaXBhdGhcVWlQYXRoX1Rlc3RpbmdGcmFtZXdvcmsgLSBIYWNrYXRvblxUZXN0c19SZXBvc2l0b3J5XFVuaXRUZXN0VGVtcGxhdGVcTWV0aG9kTmFtZV9TdGF0ZVVuZGVyVGVzdF9FeHBlY3RlZEJlaGF2aW9yLnhhbWwOPgNgDgIBAUMFThACAQxPBVoQAgEHWwVeEAIBAkQHTRACAQ1QB1kfAgEIXAdckgECAQVdB12aAQIBA0oNSjwCARBGM0Y9AgEOUkJSSgIBClYNVjwCAQlcIVw9AgEGXSFdRQIBBA==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="243.2,60.8" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="340,309.6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="313.6,292">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="340,524">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AssertUnitTest_2" sap:VirtualizedContainerService.HintSize="318,120" />
+      <sap2010:ViewStateData Id="AssertUnitTest_1" sap:VirtualizedContainerService.HintSize="318,120">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="340,671">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="361.6,2136.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ParsingTest_1" sap:VirtualizedContainerService.HintSize="401.6,2216.8" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

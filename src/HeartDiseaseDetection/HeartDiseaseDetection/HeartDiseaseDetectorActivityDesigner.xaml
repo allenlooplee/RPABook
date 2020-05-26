@@ -1,0 +1,27 @@
+﻿<sap:ActivityDesigner x:Class="HeartDiseaseDetection.HeartDiseaseDetectorActivityDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <sapc:ArgumentToExpressionConverter x:Key="argumentToExpressionConverter"/>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <sapv:ExpressionTextBox
+            x:Name="modelFilePathTextBox"
+            HintText="Enter a model file path"
+            Expression="{Binding Path=ModelItem.ModelFilePath, Mode=TwoWay, Converter={StaticResource argumentToExpressionConverter}, ConverterParameter=In}"
+            ExpressionType="sys:String"
+            OwnerActivity="{Binding Path=ModelItem}"
+            Width="200"/>
+        <Button Content="..." Click="Button_Click" Width="24" Grid.Column="1" Margin="6,0,0,0"/>
+    </Grid>
+</sap:ActivityDesigner>
