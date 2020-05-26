@@ -1,0 +1,28 @@
+{
+  "name": "Demo1",
+  "description": "Demo for Recording",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.UIAutomation.Activities": "[18.3.6897.22543]",
+    "UiPath.System.Activities": "[18.3.6897.22524]",
+    "UiPath.Excel.Activities": "[2.4.6884.25683]",
+    "UiPath.Mail.Activities": "[1.2.6863.29868]",
+    "Microsoft.Activities.Extensions": "[2.0.6.9]"
+  },
+  "schemaVersion": "3.2",
+  "studioVersion": "18.4.0.6",
+  "projectVersion": "1.0.0.0",
+  "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandler.xaml",
+    "autoDispose": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ]
+  },
+  "projectType": "Workflow",
+  "libraryOptions": {
+    "includeOriginalXaml": false,
+    "privateWorkflows": []
+  }
+}
