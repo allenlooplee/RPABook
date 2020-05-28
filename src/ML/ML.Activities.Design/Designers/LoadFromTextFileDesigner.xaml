@@ -1,0 +1,34 @@
+﻿<sap:ActivityDesigner x:Class="ML.Activities.Design.LoadFromTextFileDesigner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+             xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+             xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+             xmlns:local="clr-namespace:ML.Activities.Design"
+             xmlns:p="clr-namespace:ML.Activities.Design.Properties"
+             xmlns:Presentation="clr-namespace:UiPath.Activities.Presentation" 
+             xmlns:converters="clr-namespace:UiPath.Activities.Presentation.Converters">
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Themes\Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+            <sapc:ArgumentToExpressionConverter x:Key="argumentToExpressionConverter"/>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/ML.Activities.Design;component/themes/icons.xaml}" />
+    </sap:ActivityDesigner.Icon>
+
+    <Grid>
+        <Presentation:FilePathControl 
+            ModelItem="{Binding Path=ModelItem}"
+            Expression="{Binding Path=ModelItem.FilePath, Mode=TwoWay, Converter={StaticResource argumentToExpressionConverter}, ConverterParameter=In}"
+            PropertyName="FilePath"
+            Filter="CSV files |*.csv"/>
+    </Grid>
+
+</sap:ActivityDesigner>

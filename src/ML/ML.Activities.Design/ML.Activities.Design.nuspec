@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$title$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://integrations.uipath.com/docs/integrating-with-uipath</projectUrl>
+    <description>$description$</description>
+    <copyright>2019</copyright>
+    <tags>UiPath</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>
+

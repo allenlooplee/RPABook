@@ -1,0 +1,37 @@
+﻿<sap:ActivityDesigner x:Class="ML.Activities.Design.Designers.SelectColumnsDesigner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+             xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+             xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+             xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+             xmlns:local="clr-namespace:ML.Activities.Design"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:p="clr-namespace:ML.Activities.Design.Properties"
+             xmlns:Presentation="clr-namespace:UiPath.Activities.Presentation" 
+             xmlns:converters="clr-namespace:UiPath.Activities.Presentation.Converters">
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Themes\Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+            <sapc:ArgumentToExpressionConverter x:Key="argumentToExpressionConverter"/>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/ML.Activities.Design;component/themes/icons.xaml}" />
+    </sap:ActivityDesigner.Icon>
+    
+    <Grid>
+        <sapv:ExpressionTextBox
+            HintText="Enter column names separated by comma"
+            Expression="{Binding Path=ModelItem.ColumnNames, Mode=TwoWay, Converter={StaticResource argumentToExpressionConverter}, ConverterParameter=In}"
+            ExpressionType="sys:String"
+            OwnerActivity="{Binding Path=ModelItem}"/>
+
+    </Grid>
+    
+</sap:ActivityDesigner>
