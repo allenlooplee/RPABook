@@ -31,3 +31,7 @@
 [HeartDiseaseDetection](https://github.com/allenlooplee/RPABook/tree/master/src/HeartDiseaseDetection)|创建自定义预测活动|第8章 RPA x WF x WPF
 [ML](https://github.com/allenlooplee/RPABook/tree/master/src/ML)|创建自定义数据处理活动|第8章 RPA x WF x WPF
 [Demo7](https://github.com/allenlooplee/RPABook/tree/master/src/Demo7)|从京东金融中获取小金库收益信息，并在网易有钱中对账和记账|第9章 案例实践：货基收益自动对账
+
+*注意：*
+* *在运行 Demo4 之前，请在相应的地方填入你的百度 AI 开放平台的 API Key 和 Secret Key。*
+* *RPA x OCR 已从调用百度 OCR 的 .NET SDK 演变成 [Cloud OCR Activities Pack](https://github.com/allenlooplee/CloudOcrActivitiesPack)，并支持百度、合合、腾讯和阿里等多个云 OCR 服务。*
