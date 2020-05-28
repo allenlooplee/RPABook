@@ -16,3 +16,17 @@
 
 以上这些内容其实是我在构思这本书大纲时的思考，把这些内容写下来一方面希望帮你找到合适的阅读方式，另一方面也想让你了解本书为何写成这样。
 
+## 代码清单
+
+项目名称|项目描述|对应章节
+---|---|---
+HelloWorld|通过 Outlook 发送 Hello World 邮件|第2章 UiPath 概览
+Demo1|操作计算器、操作浏览器|第3章 开发基础
+Demo2|操作文件和文件夹、抓取网页信息、操作 Office 软件、响应用户事件、读写配置文件、编写单元测试|第4章 常用技能和示例
+Demo3|操作 SQLite 数据库、读写配置文件|第4章 常用技能和示例
+Demo4|使用百度 OCR 识别增值税发票、使用百度 NLP 提取新闻标签并使用 Python 生成词云图|第5章 RPA x OCR、第6章 RPA x NLP
+ConsoleApp1|使用 ML.NET Model Builder 自动训练模型|第7章 RPA x AutoML
+Demo5|通过自定义活动使用模型进行预测|第7章 RPA x AutoML
+Demo6|通过自定义 ML.NET 活动进行数据处理|第7章 RPA x AutoML
+HeartDiseaseDetection|创建自定义活动|第8章 RPA x WF x WPF
+Demo7|从京东金融中获取小金库收益信息，并在网易有钱中对账和记账|第9章 案例实践：货基收益自动对账
