@@ -26,8 +26,8 @@
 [Demo3](https://github.com/allenlooplee/RPABook/tree/master/src/Demo3)|操作 SQLite 数据库、读写配置文件|第4章 常用技能和示例
 [Demo4](https://github.com/allenlooplee/RPABook/tree/master/src/Demo4)|使用百度 OCR 识别增值税发票、使用百度 NLP 提取新闻标签并使用 Python 生成词云图|第5章 RPA x OCR、第6章 RPA x NLP
 [ConsoleApp1](https://github.com/allenlooplee/RPABook/tree/master/src/ConsoleApp1)|使用 ML.NET Model Builder 自动训练模型|第7章 RPA x AutoML
-[Demo5](https://github.com/allenlooplee/RPABook/tree/master/src/Demo5)|通过自定义活动使用模型进行预测|第7章 RPA x AutoML
-[Demo6](https://github.com/allenlooplee/RPABook/tree/master/src/Demo6)|通过自定义 ML.NET 活动进行数据处理|第7章 RPA x AutoML
+[Demo5](https://github.com/allenlooplee/RPABook/tree/master/src/Demo5)|通过 HeartDiseaseDetection 自定义活动进行预测|第7章 RPA x AutoML
+[Demo6](https://github.com/allenlooplee/RPABook/tree/master/src/Demo6)|通过 ML 自定义活动进行数据处理|第7章 RPA x AutoML
 [HeartDiseaseDetection](https://github.com/allenlooplee/RPABook/tree/master/src/HeartDiseaseDetection)|创建自定义预测活动|第8章 RPA x WF x WPF
 [ML](https://github.com/allenlooplee/RPABook/tree/master/src/ML)|创建自定义数据处理活动|第8章 RPA x WF x WPF
 [Demo7](https://github.com/allenlooplee/RPABook/tree/master/src/Demo7)|从京东金融中获取小金库收益信息，并在网易有钱中对账和记账|第9章 案例实践：货基收益自动对账
