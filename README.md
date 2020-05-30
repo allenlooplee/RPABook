@@ -37,3 +37,7 @@
 *注意：*
 * *在运行 Demo4 之前，请在相应的地方填入你的百度 AI 开放平台的 API Key 和 Secret Key。*
 * *RPA x OCR 已从调用百度 OCR 的 .NET SDK 演变成 [Cloud OCR Activities Pack](https://github.com/allenlooplee/CloudOcrActivitiesPack)，并支持百度、合合、腾讯和阿里等多个云 OCR 服务。*
+
+## 文字带货
+
+1. [京东（正在铺货）](https://item.jd.com/12665657.html)
