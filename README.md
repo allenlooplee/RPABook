@@ -46,4 +46,4 @@
 
 ## 许可协议
 
-[示例代码](https://github.com/allenlooplee/RPABook/tree/master/src)遵循[MIT许可协议](https://github.com/allenlooplee/RPABook/blob/master/LICENSE)。
+本书的[示例代码](https://github.com/allenlooplee/RPABook/tree/master/src)遵循[MIT许可协议](https://github.com/allenlooplee/RPABook/blob/master/LICENSE)。
