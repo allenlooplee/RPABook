@@ -40,4 +40,6 @@
 
 ## 文字带货
 
-1. [京东（正在铺货）](https://item.jd.com/12665657.html)
+1. [京东](https://search.jd.com/Search?keyword=RPA%E5%BC%80%E5%8F%91%E4%B8%8E%E5%BA%94%E7%94%A8&enc=utf-8&suggest=1.his.0.0&wq=&pvid=53fed3b969c34e19b50d38544aee9725)
+2. [天猫](https://list.tmall.com/search_product.htm?q=RPA%BF%AA%B7%A2%D3%EB%D3%A6%D3%C3&type=p&vmarket=&spm=875.7931836%2FB.a2227oh.d100&from=mallfp..pc_1_searchbutton)
+3. [当当](http://product.dangdang.com/28558392.html)
